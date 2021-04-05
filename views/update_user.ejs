@@ -1,0 +1,87 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+<hr>
+<section class="text-center" id='about'>
+  <div class="row">
+    <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-muted mb-5" id="skills">About</h2>
+    </div>
+</div>
+
+<div class="container">
+  
+        <div class="col-sm-2 mb-3">
+         <a href="/" class="btn  btn-outline btn-floating" >
+                      <i class="fas fa-angle-double-left"></i></span>
+                    </a>
+        </div>
+        <div class="justify-content-center mb-5">
+        <h2 class="text-muted">Update User</h2>
+            <span>Use the below form to Update an account</span>
+        </div>
+
+        <!-- form handing-->
+        <div class="table-responsive">
+        <form method="POST" id="update_user">
+        
+            <div class="form-outline mb-4">
+                <label for="name" class="text-muted">Name</label>
+                <input type="hidden" name="id" value="<%= user._id %>">
+                <input type="text" name="name" value="<%= user.name %>" placeholder="Mart Marte">
+            </div>
+       
+        
+            <div class="form-outline mb-4">
+                <label for="email" class="text-muted">Email</label>
+                <input type="text" name="email" value="<%= user.email %>" placeholder="example@mail.com">
+            </div>
+        
+            <div class="form-outline mb-4">
+                <label for="programming" class="text-muted">Programming languages and programs</label>
+                <input type="text" name="programming" value="<%= user.programming %>" placeholder="html.."> 
+            </div>
+            <div class="form-outline mb-4">
+                <label for="design" class="text-muted">Design and multimedia</label>
+                <input type="text" name="design" value="<%= user.design %>" placeholder="photoshop.."> 
+            </div>
+            <div class="form-outline mb-4">
+                <label for="skills" class="text-muted">Another skills</label>
+                <input type="text" name="skills" value="<%= user.skills %>" placeholder="photoshop.."> 
+            </div>
+
+            <div class="form-check form-check-inline mb-4">
+                <label class="form-check-label" for="status" class="text-muted">Status</label>
+               
+                    <div class="form-check-inline">
+                    <input type="radio" id="radio-4" name="status" value="Active"<%= user.status=='Active' ? 'checked':'' %>>
+                    <label class="form-check-label" for="radio-4" >Active</label>
+                    </div>
+                    <div class="form-check-inline">
+                    <input type="radio" id="radio-5" name="status" value="Inactive"<%= user.status=='Inactive' ? 'checked':'' %>>
+                    <label for="radio-5">Inactive</label>
+                    </div>
+            </div>
+            <div class="form-outline mb-4">
+                <label for="description" class="text-muted">Describe personal skills</label>
+                <input type="text" name="description" value="<%= user.description %>" placeholder="html.."> 
+            </div>
+        </div>
+            <div class="form-group">
+                <button type="submit" class="btn text-dark update">Save</button>
+            </div>
+      
+    
+        </form>
+        
+    </div>
+  
+<!-- /Main Site -->
+
+</section>
+<hr>
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->

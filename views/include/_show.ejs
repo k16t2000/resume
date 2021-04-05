@@ -1,0 +1,19 @@
+<% for(var i=0;i<users.length;i++){%>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= users[i].name %></td>
+                    <td><%= users[i].email %></td>
+                    <td><%= users[i].programming %></td>
+                    <td><%= users[i].design %></td>
+                    <td ><%= users[i].skills %></td>
+                    <td ><%= users[i].status %></td>
+                    <td class="col-sm-2">
+                    <a href="/update-user?id=<%= users[i]._id %>" class="btn  btn-outline btn-floating" >
+                      <i class="fas fa-pencil-alt"></i></span>
+                    </a>
+                    
+   
+                    </td>
+                </tr>
+                <% } %>
+           
